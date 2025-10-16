@@ -287,7 +287,9 @@ footer {
   font-size: 14px;
   color: var(--muted);
 }
-/* === MENÚ RESPONSIVO SOLO PARA CELULAR === */
+/* === MENÚ RESPONSIVO === */
+
+/* --- MÓVIL Y TABLET --- */
 @media (max-width: 768px) {
   /* Mostrar el botón ☰ solo en móvil */
   .menu-toggle {
@@ -300,7 +302,7 @@ footer {
     z-index: 1001;
   }
 
-  /* 🔹 Ocultar el menú por defecto */
+  /* Ocultar menú por defecto */
   .menu {
     display: none;
     flex-direction: column;
@@ -319,28 +321,28 @@ footer {
     z-index: 1000;
   }
 
-  /* 🔹 Mostrar al abrir */
+  /* Menú desplegado */
   .menu.open {
     display: flex;
     right: 0;
   }
 
-  /* Ajustes de los enlaces */
+  /* Estilo de los enlaces */
   .menu a {
     font-size: 1.1rem;
     text-align: center;
   }
 
-  /* Alinear elementos */
+  /* Ajustar la barra de navegación */
   .nav {
     justify-content: space-between;
   }
 }
 
-/* === EN PANTALLAS GRANDES (PC) === */
+/* --- ESCRITORIO --- */
 @media (min-width: 769px) {
   .menu-toggle {
-    display: none;
+    display: none; /* No mostrar el ícono en PC */
   }
 
   .menu {
@@ -357,8 +359,6 @@ footer {
     font-size: 14px;
   }
 }
-
-
 
 
 
