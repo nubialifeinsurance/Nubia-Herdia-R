@@ -288,55 +288,76 @@ footer {
   color: var(--muted);
 }
 
-/* RESPONSIVE */
-@media (max-width: 900px) {
-  .hero .container {
-    grid-template-columns: 1fr;
-  }
-
-  .verify {
-    grid-template-columns: 1fr;
-  }
-
-  .grid {
-    grid-template-columns: 1fr 1fr;
-  }
+* === MENÚ RESPONSIVO SOLO PARA CELULAR === */
 @media (max-width: 768px) {
+  /* Mostrar el botón ☰ solo en móvil */
   .menu-toggle {
     display: block;
+    background: transparent;
+    border: none;
+    font-size: 26px;
+    cursor: pointer;
+    color: var(--dark);
+    z-index: 1001;
   }
 
+  /* Ocultar el menú por defecto */
   .menu {
-    position: fixed;
-    top: 0;
-    right: -100%; /* oculto fuera de pantalla */
-    width: 70%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.98);
-    backdrop-filter: blur(10px);
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 25px;
+    position: fixed;
+    top: 0;
+    right: -100%; /* fuera de la pantalla */
+    width: 70%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
     transition: right 0.4s ease;
-    box-shadow: -5px 0 15px rgba(0,0,0,0.1);
-    z-index: 998;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
   }
 
+  /* Cuando se abre */
   .menu.open {
-    right: 0; /* aparece al hacer clic */
+    right: 0;
+  }
+
+  /* Estilo de los enlaces en móvil */
+  .menu a {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  /* Ajuste del contenedor de navegación */
+  .nav {
+    justify-content: space-between;
+  }
+}
+
+/* === EN PANTALLAS GRANDES === */
+@media (min-width: 769px) {
+  .menu-toggle {
+    display: none; /* ocultar botón ☰ */
+  }
+
+  .menu {
+    display: flex; /* menú normal horizontal */
+    position: static;
+    flex-direction: row;
+    height: auto;
+    background: transparent;
+    box-shadow: none;
+    transition: none;
   }
 
   .menu a {
-    font-size: 1.2rem;
-    color: var(--dark);
-  }
-
-  .nav a.cta {
-    font-size: 1rem;
-    padding: 8px 16px;
+    font-size: 14px;
   }
 }
+
 
 
 
