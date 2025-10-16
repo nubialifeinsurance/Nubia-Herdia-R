@@ -303,38 +303,6 @@ footer {
   }
 }
 
-@media (max-width: 600px) {
-  .grid {
-    grid-template-columns: 1fr;
-  }
-
-  .menu {
-    display: none;
-  }
-}
-
-.cta-row {
-  display: flex;
-  justify-content: center; /* centra horizontalmente */
-  align-items: center;     /* centra verticalmente */
-  gap: 10px;
-  margin-top: 14px;
-}
-/* 🌐 NAV MÓVIL MODERNO CON ANIMACIÓN */
-.menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 30px;
-  cursor: pointer;
-  color: var(--dark);
-  transition: transform 0.3s ease;
-}
-
-.menu-toggle.active {
-  transform: rotate(90deg);
-}
-
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
@@ -343,7 +311,7 @@ footer {
   .menu {
     position: fixed;
     top: 0;
-    right: -100%;
+    right: -100%; /* 🔹 Oculto por defecto */
     width: 70%;
     height: 100%;
     background: rgba(255, 255, 255, 0.98);
@@ -358,7 +326,7 @@ footer {
   }
 
   .menu.open {
-    right: 0;
+    right: 0; /* 🔹 Se muestra al hacer clic */
   }
 
   .menu a {
