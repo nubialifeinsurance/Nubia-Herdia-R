@@ -302,8 +302,14 @@ footer {
   }
 
   /* Ocultar el menú por defecto */
+ .menu {
+  display: flex;
+  gap: 18px;
+}
+
+@media (max-width: 768px) {
   .menu {
-    display: flex;
+    display: none; /* 🔹 cerrado por defecto en móvil */
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -320,10 +326,21 @@ footer {
     z-index: 1000;
   }
 
-  /* Cuando se abre */
   .menu.open {
+    display: flex; /* visible solo al abrir */
     right: 0;
   }
+
+  .menu-toggle {
+    display: block;
+    background: transparent;
+    border: none;
+    font-size: 26px;
+    cursor: pointer;
+    color: var(--dark);
+    z-index: 1001;
+  }
+}
 
   /* Estilo de los enlaces en móvil */
   .menu a {
@@ -357,6 +374,7 @@ footer {
     font-size: 14px;
   }
 }
+
 
 
 
