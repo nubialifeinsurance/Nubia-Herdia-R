@@ -185,17 +185,18 @@
   </script>
 
   <!-- SCRIPT para menú hamburguesa móvil -->
-  <script>
-    const toggle = document.querySelector('.menu-toggle');
-    const menu = document.querySelector('.menu');
+<script>
+  const toggle = document.querySelector('.menu-toggle');
+  const menu = document.querySelector('.menu');
 
-    toggle.addEventListener('click', () => {
-      menu.classList.toggle('open');
-    });
-  </script>
-
+  toggle.addEventListener('click', () => {
+    menu.classList.toggle('open');
+    toggle.classList.toggle('active'); // rota el ícono ☰
+  });
+</script>
 </body>
 </html>
+
 
 
 
