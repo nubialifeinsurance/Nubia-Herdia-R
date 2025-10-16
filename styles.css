@@ -400,6 +400,22 @@ footer {
   min-width: 140px; /* Tamaño uniforme opcional */
   text-align: center;
 }
+/* === Centrar SOLO los botones del final (footer o sección de contacto) === */
+footer .cta-row,
+#contacto .cta-row {
+  display: flex;
+  justify-content: center;  /* Centra horizontalmente */
+  align-items: center;
+  gap: 12px;                 /* Espacio entre botones */
+  flex-wrap: wrap;           /* Evita desbordes en móvil */
+  margin-top: 20px;
+}
+
+footer .cta-row .btn,
+#contacto .cta-row .btn {
+  min-width: 140px;          /* Tamaño uniforme opcional */
+  text-align: center;
+}
 
 
 
