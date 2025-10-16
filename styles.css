@@ -287,8 +287,7 @@ footer {
   font-size: 14px;
   color: var(--muted);
 }
-
-* === MENÚ RESPONSIVO SOLO PARA CELULAR === */
+/* === MENÚ RESPONSIVO SOLO PARA CELULAR === */
 @media (max-width: 768px) {
   /* Mostrar el botón ☰ solo en móvil */
   .menu-toggle {
@@ -301,22 +300,16 @@ footer {
     z-index: 1001;
   }
 
-  /* Ocultar el menú por defecto */
- .menu {
-  display: flex;
-  gap: 18px;
-}
-
-@media (max-width: 768px) {
+  /* 🔹 Ocultar el menú por defecto en móvil */
   .menu {
-    display: none; /* 🔹 cerrado por defecto en móvil */
+    display: none; /* Cerrado inicialmente */
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 25px;
     position: fixed;
     top: 0;
-    right: -100%; /* fuera de la pantalla */
+    right: -100%; /* Fuera de la pantalla */
     width: 70%;
     height: 100%;
     background: rgba(255, 255, 255, 0.98);
@@ -326,23 +319,13 @@ footer {
     z-index: 1000;
   }
 
+  /* 🔹 Cuando se abre el menú */
   .menu.open {
-    display: flex; /* visible solo al abrir */
+    display: flex;
     right: 0;
   }
 
-  .menu-toggle {
-    display: block;
-    background: transparent;
-    border: none;
-    font-size: 26px;
-    cursor: pointer;
-    color: var(--dark);
-    z-index: 1001;
-  }
-}
-
-  /* Estilo de los enlaces en móvil */
+  /* Estilo de los enlaces dentro del menú */
   .menu a {
     font-size: 1.1rem;
     text-align: center;
@@ -354,26 +337,6 @@ footer {
   }
 }
 
-/* === EN PANTALLAS GRANDES === */
-@media (min-width: 769px) {
-  .menu-toggle {
-    display: none; /* ocultar botón ☰ */
-  }
-
-  .menu {
-    display: flex; /* menú normal horizontal */
-    position: static;
-    flex-direction: row;
-    height: auto;
-    background: transparent;
-    box-shadow: none;
-    transition: none;
-  }
-
-  .menu a {
-    font-size: 14px;
-  }
-}
 
 
 
