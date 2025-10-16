@@ -300,16 +300,16 @@ footer {
     z-index: 1001;
   }
 
-  /* 🔹 Ocultar el menú por defecto en móvil */
+  /* 🔹 Ocultar el menú por defecto */
   .menu {
-    display: none; /* Cerrado inicialmente */
+    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 25px;
     position: fixed;
     top: 0;
-    right: -100%; /* Fuera de la pantalla */
+    right: -100%;
     width: 70%;
     height: 100%;
     background: rgba(255, 255, 255, 0.98);
@@ -319,23 +319,45 @@ footer {
     z-index: 1000;
   }
 
-  /* 🔹 Cuando se abre el menú */
+  /* 🔹 Mostrar al abrir */
   .menu.open {
     display: flex;
     right: 0;
   }
 
-  /* Estilo de los enlaces dentro del menú */
+  /* Ajustes de los enlaces */
   .menu a {
     font-size: 1.1rem;
     text-align: center;
   }
 
-  /* Ajuste del contenedor de navegación */
+  /* Alinear elementos */
   .nav {
     justify-content: space-between;
   }
 }
+
+/* === EN PANTALLAS GRANDES (PC) === */
+@media (min-width: 769px) {
+  .menu-toggle {
+    display: none;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: row;
+    position: static;
+    gap: 18px;
+    background: transparent;
+    box-shadow: none;
+    transition: none;
+  }
+
+  .menu a {
+    font-size: 14px;
+  }
+}
+
 
 
 
