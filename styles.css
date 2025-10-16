@@ -416,6 +416,23 @@ footer .cta-row .btn,
   min-width: 140px;          /* Tamaño uniforme opcional */
   text-align: center;
 }
+/* === Alinear a la derecha SOLO los botones del final === */
+footer .cta-row,
+#contacto .cta-row {
+  display: flex;
+  justify-content: flex-end; /* 🔹 Alinea los botones hacia la derecha */
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  padding-right: 5%; /* 🔹 Da un pequeño margen desde el borde */
+}
+
+footer .cta-row .btn,
+#contacto .cta-row .btn {
+  min-width: 140px;
+  text-align: center;
+}
 
 
 
