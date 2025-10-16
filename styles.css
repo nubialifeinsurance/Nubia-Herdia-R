@@ -364,6 +364,28 @@ footer {
     font-size: 14px;
   }
 }
+/* === Ajuste de alineación del menú en PC === */
+@media (min-width: 769px) {
+  .menu {
+    display: flex;
+    align-items: center; /* 🔹 Centra verticalmente los enlaces */
+    gap: 18px;
+  }
+
+  .menu a {
+    display: flex;
+    align-items: center; /* 🔹 Asegura que los textos y botones estén alineados */
+    height: 32px;        /* 🔹 Igual altura para todos */
+  }
+
+  .menu a.cta {
+    padding: 6px 14px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
 
 
 
