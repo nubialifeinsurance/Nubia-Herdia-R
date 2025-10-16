@@ -11,11 +11,6 @@
   box-sizing: border-box;
 }
 
-/* 🔹 Forzar menú cerrado al cargar (en cualquier tamaño de pantalla) */
-.menu {
-  display: none !important;
-}
-
 body {
   margin: 0;
   font-family: "Inter", sans-serif;
@@ -25,7 +20,7 @@ body {
   /* Fondo con logo muy pequeño centrado y gradiente azul-gris */
   background:
     linear-gradient(135deg, rgba(230, 236, 245, 0.97), rgba(219, 229, 243, 0.97)),
-    url("logo.png") center center no-repeat;
+    url('images/logo.png') center center no-repeat;
   background-size: 5px, cover; /* Logo muy pequeño */
   background-attachment: scroll; /* Se mueve con la página */
   opacity: 0.9;
@@ -292,61 +287,36 @@ footer {
   font-size: 14px;
   color: var(--muted);
 }
-/* === MENÚ RESPONSIVO === */
 
-/* --- MÓVIL Y TABLET --- */
-@media (max-width: 768px) {
-  /* Mostrar el botón ☰ solo en móvil */
-  .menu-toggle {
-    display: block;
-    background: transparent;
-    border: none;
-    font-size: 26px;
-    cursor: pointer;
-    color: var(--dark);
-    z-index: 1001;
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .hero .container {
+    grid-template-columns: 1fr;
   }
 
-  /* Ocultar menú por defecto */
-  .menu {
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 25px;
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 70%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.98);
-    backdrop-filter: blur(10px);
-    transition: right 0.4s ease;
-    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
+  .verify {
+    grid-template-columns: 1fr;
   }
 
-  /* Menú desplegado */
-  .menu.open {
-    display: flex;
-    right: 0;
-  }
-
-  /* Estilo de los enlaces */
-  .menu a {
-    font-size: 1.1rem;
-    text-align: center;
-  }
-
-  /* Ajustar la barra de navegación */
-  .nav {
-    justify-content: space-between;
+  .grid {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
 
+  .menu {
+    display: none;
+  }
+}
 
-
-
-
-
+.cta-row {
+  display: flex;
+  justify-content: center; /* centra horizontalmente */
+  align-items: center;     /* centra verticalmente */
+  gap: 10px;
+  margin-top: 14px;
+}
