@@ -11,6 +11,11 @@
   box-sizing: border-box;
 }
 
+/* 🔹 Forzar menú cerrado al cargar (en cualquier tamaño de pantalla) */
+.menu {
+  display: none !important;
+}
+
 body {
   margin: 0;
   font-family: "Inter", sans-serif;
@@ -359,6 +364,7 @@ footer {
     font-size: 14px;
   }
 }
+
 
 
 
