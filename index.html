@@ -11,21 +11,19 @@
 <body>
 
   <!-- NAV -->
-<nav class="nav" role="navigation" aria-label="Menú principal">
-  <div class="logo">
-    <img src="logo.png" alt="Logo Nubia Heredia">
-    <div class="brand">Nubia Heredia Romero</div>
-  </div>
+  <nav class="nav" role="navigation" aria-label="Menú principal">
+    <div class="logo">
+      <img src="images/logo.png" alt="Logo Nubia Heredia">
+      <div class="brand">Nubia Heredia Romero</div>
+    </div>
 
-  <button class="menu-toggle" aria-label="Abrir menú">☰</button>
-
-  <div class="menu">
-    <a href="#servicios">Servicios</a>
-    <a href="#verifica">Verifícame</a>
-    <a href="#por-que">Por qué elegirnos?</a>
-    <a href="#contacto" class="cta">¡Contáctame!</a>
-  </div>
-</nav>
+    <div class="menu">
+      <a href="#servicios">Servicios</a>
+      <a href="#verifica">Verificame</a>
+      <a href="#por-que">Por qué elegirnos?</a>
+      <a href="#contacto" class="cta">Contactame!</a>
+    </div>
+  </nav>
 
   <!-- HERO -->
   <header class="hero" role="banner">
@@ -58,7 +56,7 @@
 
       <aside class="card">
         <div class="meta">
-       <img class="avatar" src="perfilnubia.jpeg" alt="Foto Nubia Heredia Romero">
+          <img class="avatar" src="images/perfilnubia.JPEG" alt="Foto Nubia Heredia Romero">
           <div class="info">
             <h3>Nubia Heredia Romero</h3>
             <p class="muted">Productora de Seguros de Vida</p>
@@ -180,40 +178,8 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
- <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
 
-  <!-- SCRIPT para menú hamburguesa móvil -->
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const toggle = document.querySelector(".menu-toggle");
-    const menu = document.querySelector(".menu");
-
-    // 🔹 Asegura que esté cerrado al iniciar
-    menu.classList.remove("open");
-
-    toggle.addEventListener("click", () => {
-      menu.classList.toggle("open");
-    });
-  });
-</script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
