@@ -20,7 +20,7 @@ body {
   /* Fondo con logo muy pequeño centrado y gradiente azul-gris */
   background:
     linear-gradient(135deg, rgba(230, 236, 245, 0.97), rgba(219, 229, 243, 0.97)),
-    url('images/logo.png') center center no-repeat;
+    url("logo.png") center center no-repeat;
   background-size: 5px, cover; /* Logo muy pequeño */
   background-attachment: scroll; /* Se mueve con la página */
   opacity: 0.9;
@@ -320,3 +320,4 @@ footer {
   gap: 10px;
   margin-top: 14px;
 }
+
