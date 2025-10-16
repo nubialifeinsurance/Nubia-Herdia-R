@@ -386,6 +386,21 @@ footer {
     justify-content: center;
   }
 }
+/* === Centrar botones del final de la página === */
+.cta-row {
+  display: flex;
+  justify-content: center; /* 🔹 Centra los botones horizontalmente */
+  align-items: center;
+  gap: 12px; /* Espacio entre botones */
+  flex-wrap: wrap; /* Evita que se salgan en pantallas pequeñas */
+  margin-top: 20px;
+}
+
+.cta-row .btn {
+  min-width: 140px; /* Tamaño uniforme opcional */
+  text-align: center;
+}
+
 
 
 
